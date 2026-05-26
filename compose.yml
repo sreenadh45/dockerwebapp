@@ -18,18 +18,6 @@ services:
       replicas: 3
     depends_on:
       - devopsdb
-      - rabbitmq
-    networks:
-      - mynetwork
-    environment:
-      SPRING_RABBITMQ_HOST: rabbitmq
-      SPRING_RABBITMQ_PORT: 5672
-
-  rabbitmq:
-    image: rabbitmq:3-management
-    ports:
-      - "5672:5672"     # broker port
-      - "15672:15672"   # management UI
     networks:
       - mynetwork
 
@@ -37,3 +25,4 @@ networks:
   mynetwork:
     driver: overlay
     attachable: true
+    
