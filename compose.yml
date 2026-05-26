@@ -24,5 +24,4 @@ services:
 networks:
   mynetwork:
     driver: overlay
-    attachable: true
     
