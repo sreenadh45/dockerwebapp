@@ -5,8 +5,6 @@ services:
     image: sreenadh45/dockerp1:db
     ports:
       - "3306:3306"
-    deploy:
-      replicas: 1
     networks:
       - mynetwork
 
